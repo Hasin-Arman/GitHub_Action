@@ -1,0 +1,15 @@
+name: CI/CD PIPELINE
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  read_from_file:
+    runs_on: ubuntu-latest
+    steps:
+      - name: clone the project and redirect
+        uses: actions/checkout@v2
+      - name: read the file
+        run : cat hello.txt
