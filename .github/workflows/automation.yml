@@ -13,3 +13,7 @@ jobs:
         uses: actions/checkout@v2
       - name: read the file
         run : cat hello.txt
+      - name: redirect to another folder and cat
+      - run : |
+              cd test
+              cat my_text.txt
